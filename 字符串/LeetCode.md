@@ -36,12 +36,12 @@ class Solution:
 ```java
 class Solution {
 public:
-    string reverseString(string s) {
-        int left = 0, right = s.size() - 1;
+    String reverseString(String s) {
+        int left = 0, right = s.length() - 1;
         while (left < right) {
-            char t = s[left];
-            s[left++] = s[right];
-            s[right--] = t;
+            char t = s.charAt(left);
+            s.charAt(left++) = s.charAt(right);
+            s.charAt(right--) = t;
         }
         return s;
     }
@@ -49,9 +49,9 @@ public:
 
 int left = 0, right = s.size() - 1;
 while(left < right){
-    char t = s[left];
-    s[left] = s[right];
-    s[right] = t;
+    char t = s.charAt(left);
+    s.charAt(left) = s.charAt(right);
+    s.charAt(right) = t;
     left++;
     right--
 }
@@ -62,10 +62,10 @@ swap函数
 ```java
 class Solution{
     public :
-    string reverseString(String s){
-        int left = 0, right = s.size() - 1;
+    String reverseString(String s){
+        int left = 0, right = s.length() - 1;
         while(left < right){
-            swap(s[left++], s[right--]);
+            swap(s.charAt(left++), s.charAt(right--));
         }
         return s;
     }
